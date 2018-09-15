@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    searchText: '',
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -55,5 +56,23 @@ Page({
     wx.navigateTo({
       url: '../map/map',
     })
+  },
+  search: function(e) {
+    console.log(e);
+    wx.request({
+      url: 'http://www.phonegap100.com/appapi.php?a=getPortalCate',
+      data: {},
+      header: {},
+      method:'get',
+      success: function(response) {},
+      fail: function(response) {},
+      complete: function(response) {}
+    })
+  },
+  bindInput: function(e) {
+    console.log(e);
+    this.setData({
+      searchText: e.detail.value
+    });
   }
 })
