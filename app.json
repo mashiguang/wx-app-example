@@ -9,14 +9,16 @@
     "navigationBarBackgroundColor": "#eee",
     "navigationBarTitleText": "图书搜索",
     "navigationBarTextStyle":"black",
-    "backgroundColor":"#fff",
-    "enablePullDownRefresh": true
+    "backgroundColor":"#fff"
   },
   "tabBar": {
     "list":[{
-      "pagePath": "pages/map/map",
-      "text":"地图"
-    },{
+        "pagePath": "pages/map/map",
+        "text": "地图"
+      },{
+        "pagePath": "pages/index/index",
+        "text": "index"
+      },{
       "pagePath": "pages/logs/logs",
       "text": "日志"
     }],

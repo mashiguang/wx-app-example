@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view class="section">
   <input placeholder='请输入图书名称或作者名' auto-focus='true' confirm-type='search' bindinput='bindInput'></input>
   <button bindtap='search'>search</button>
 </view>
