@@ -5,9 +5,24 @@
     "pages/map/map"
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#eee",
+    "navigationBarTitleText": "图书搜索",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#fff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list":[{
+      "pagePath": "pages/map/map",
+      "text":"地图"
+    },{
+      "pagePath": "pages/logs/logs",
+      "text": "日志"
+    }],
+    "color": "#eee",
+    "selectedColor":"#000",
+    "backgroundColor":"#fff"
+  },
+  "debug":true
 }
