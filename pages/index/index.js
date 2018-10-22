@@ -8,7 +8,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    arr_book : []
   },
   //事件处理函数
   bindViewTap: function() {
@@ -58,13 +59,20 @@ Page({
     })
   },
   search: function(e) {
-    console.log(e);
+    console.log('e',e);
+    var page = this;
     wx.request({
-      url: 'http://www.phonegap100.com/appapi.php?a=getPortalCate',
+      url: 'http://localhost:8080/book?text='+page.data.searchText,
       data: {},
       header: {},
       method:'get',
-      success: function(response) {},
+      success: function(response) {
+        console.log(response);
+        page.setData({
+          'arr_book': response.data
+        });
+        //arr_book = response.data;
+      },
       fail: function(response) {},
       complete: function(response) {}
     })

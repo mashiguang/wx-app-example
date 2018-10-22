@@ -1,5 +1,8 @@
 <!--index.wxml-->
-<view class="section">
+<view class="container">
   <input placeholder='请输入图书名称或作者名' auto-focus='true' confirm-type='search' bindinput='bindInput'></input>
   <button bindtap='search'>search</button>
+</view>
+<view class='container'>
+  <text wx:for="{{arr_book}}">{{item.name}},{{item.position}} </text>
 </view>
